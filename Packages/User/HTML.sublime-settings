@@ -1,0 +1,9 @@
+// These settings override both User and Default settings for the HTML syntax
+{
+	"extensions":
+	[
+	],
+
+	// Outside adjacent bracket matching
+	"bracket_outside_adjacent": true,
+}

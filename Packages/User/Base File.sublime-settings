@@ -1,0 +1,47 @@
+{
+    "jsdocs_align_tags": "no",
+
+    // If set to true, Ctrl+Enter while in a single line comment will 'decorate' the comment.
+    "jsdocs_decorate": true,
+
+
+    "jsdocs_deep_indent": true,
+
+    "jsdocs_extend_double_slash": true,
+
+    "jsdocs_extra_tags": [
+        // "@author DiHalt",
+        // "@version ${1:[version]}"
+    ],
+
+    // the number of spaces to add after the leading *
+    "jsdocs_indentation_spaces": 1,
+    "jsdocs_indentation_spaces_same_para": 3,
+
+    "jsdocs_newline_after_block": false,
+
+
+    "jsdocs_per_section_indent": true,
+
+    // Add a name of parameter in param tag?
+    "jsdocs_param_name": true,
+
+    // If set to true, typing /**<space> will open an inline docblock
+    "jsdocs_quick_open_inline": true,
+
+
+    "jsdocs_return_tag": "@return",
+
+    // Add a '[function_name description]' for the function block
+    "jsdocs_function_description": true,
+
+    // Add a '[description]' placeholder for the return tag?
+    "jsdocs_return_description": true,
+
+    // Add a '[description]' placeholder for the param tag?
+    "jsdocs_param_description": true,
+
+
+    "jsdocs_spacer_between_sections": true
+
+}

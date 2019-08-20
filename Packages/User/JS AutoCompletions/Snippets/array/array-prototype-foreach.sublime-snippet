@@ -1,0 +1,8 @@
+<snippet>
+  <content>
+    <![CDATA[Array.prototype.${1:method_name}.call(${2:list}, ${3:function});]]>
+  </content>
+  <tabTrigger>array_prototype_call</tabTrigger>
+  <scope>source.js - (meta.property.object.js, meta.function.declaration.js, variable.function.js, support.constant, string.quoted)</scope>
+  <description> Array.prototype.method.call(nodeList, fn)</description>
+</snippet>

@@ -1,0 +1,73 @@
+{
+  "all": {
+    "end_with_newline": true,
+    "eol": "\n",
+    "indent_level": 0,
+    "indent_char": " ",
+    "indent_empty_lines": false,
+    "indent_size": 2,
+    "indent_with_tabs": false,
+    "max_preserve_newlines": 7,
+    "preserve_newlines": true,
+    "wrap_line_length": 0
+  },
+  "html": {
+    "extra_liners": [
+      "/body"
+    ],
+    "indent_handlebars": false,
+    "indent_inner_html": false,
+    "indent_scripts": "keep",
+    "templating": ["auto"],
+    "unformatted": [],
+    "js": {},
+    "css": {}
+  },
+  "css": {
+    "newline_between_rules": true,
+    "selector_separator": " ",
+    "selector_separator_newline": true
+  },
+  "js": {
+    "brace_style": "collapse,preserve-inline",
+    "break_chained_methods": false,
+    "comma_first": false,
+    "e4x": true,
+    "editorconfig": false,
+    "end_with_newline": true,
+    "eval_code": false,
+    "indent_char": " ",
+    "indent_empty_lines": false,
+    "indent_level": 0,
+    "indent_size": 2,
+    "indent_with_tabs": false,
+    "jslint_happy": false,
+    "keep_array_indentation": false,
+    "keep_function_indentation": false,
+    "max_preserve_newlines": 10,
+    "operator_position": "after-newline",
+    "preserve_newlines": true,
+    "space_after_anon_function": true,
+    "space_before_conditional": true,
+    "space_in_empty_paren": false,
+    "space_in_paren": false,
+    "unescape_strings": false,
+    "unindent_chained_methods": false,
+    "wrap_line_length": 0
+  },
+  "json": {
+    "brace_style": "end-expand",
+    "keep_array_indentation": false,
+    "unescape_strings": false
+  },
+  "custom": {
+    "@(package?(-lock)|yarn-lock).json": {
+      "indent_size": 2,
+      "brace_style": "collapse"
+    },
+    "*.sublime-@(settings|keymap|commands|menu)": {
+      "indent_size": 2,
+      "brace_style": "end-expand,preserve-inline"
+    }
+  }
+}

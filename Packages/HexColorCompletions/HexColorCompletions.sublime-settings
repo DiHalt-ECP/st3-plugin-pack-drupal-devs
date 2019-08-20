@@ -1,0 +1,16 @@
+// These settings override both User and Default settings for the CSS syntax
+{
+      "auto_complete_triggers": [
+        {
+          "selector": "meta.property-value.css, punctuation.terminator.rule.css",
+          "characters": "#"
+        }
+        ],
+      "hex_color_complete_triggers": [
+        {
+          "selector": "meta.property-value.css",
+          "characters": "#"
+        }
+      ],
+
+}

@@ -1,0 +1,9 @@
+// These settings override both User and Default settings for the JavaScript syntax
+{
+  "ignored_packages": [
+    "ESLint-Formatter",
+    "Phpcs",
+    "SublimeLinter-eslint",
+    "Vintage"
+  ]
+}

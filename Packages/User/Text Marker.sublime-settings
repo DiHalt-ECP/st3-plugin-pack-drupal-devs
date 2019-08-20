@@ -1,0 +1,27 @@
+/*
+  Text Marker user settings in here override the default
+*/
+{
+  "user": {
+    "live_color": "#f60c",
+    "draw_outlined": true,
+    "default_colors": [
+      // "darkmagenta",
+      "darkturquoise",
+      "limegreen",
+      "deeppink",
+      "skyblue",
+      "slateblue",
+      "lightcoral",
+      "darkviolet",
+      "darkgoldenrod",
+      "olivedrab",
+      "darkgray",
+      "darkkhaki",
+      "darkorange",
+      "darksalmon",
+      "darkseagreen",
+      "brown"
+    ],
+  }
+}

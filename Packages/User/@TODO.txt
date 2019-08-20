@@ -1,0 +1,16 @@
+
+Need:
+----------
+JS completion/Snippets
+SASS Lint
+SASS completion/Snippets
+
+
+
+need formatters for TWIG and PHP templates.
+
+
+Для PHP нужно поправить плагины Drupal and PHP Completions Kit
+Ограничить scope срабатывания автодополнения этих плагинов.
+Навести порядок в Drupal плагине для автодополнений.
+

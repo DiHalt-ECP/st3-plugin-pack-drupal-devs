@@ -1,0 +1,10 @@
+{
+  "scope": "source.js meta.property.object.js",
+  "completions": [{
+      "trigger": "global\tany",
+      "contents": "global"
+    },
+    "prototype"
+
+  ]
+}

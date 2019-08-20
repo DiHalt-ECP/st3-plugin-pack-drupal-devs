@@ -1,0 +1,641 @@
+[
+
+  // =============================================
+  // Disable Default hotkeys from plugins.
+  // =============================================
+
+  // BASE
+  // ---------------------------------------------
+  { "keys": ["ctrl+."], "command": "" },
+  { "keys": ["ctrl+,"], "command": "" },
+
+
+  // Comment Fold
+  // ---------------------------------------------
+  { "keys": ["ctrl+alt+/"], "command": "" },
+  { "keys": ["ctrl+alt+shift+/"], "command": "" },
+
+
+  // DocBlockr.
+  // ---------------------------------------------
+  { "keys": ["alt+q"], "command": "", },
+
+
+  // Text Marker
+  // ---------------------------------------------
+  { "keys": ["alt+space"], "command": "", },
+  { "keys": ["alt+escape"], "command": "" },
+
+
+  // EMMET
+  // ---------------------------------------------
+  { "keys": ["shift+ctrl+g"], "command": "" },
+  { "keys": ["ctrl+e"], "command": "" },
+
+
+  // HTML/CSS/JS/JSON Prettify
+  // ---------------------------------------------
+  // { "keys": ["ctrl+alt+h"], "command": "" },
+
+
+  // JavaScript Enhancements
+  // ---------------------------------------------
+  { "keys": ["super+alt+j"], "command": "" },
+
+
+
+
+
+  // =============================================
+  // BASIC. Internal Commands.
+  // =============================================
+
+  // Scroll document
+  { "keys": ["ctrl+up"], "command": "scroll_lines", "args": { "amount": 3.0 } },
+  { "keys": ["ctrl+down"], "command": "scroll_lines", "args": { "amount": -3.0 } },
+  // console
+  { "keys": ["alt+`"], "command": "show_panel", "args": { "panel": "console", "toggle": true } },
+
+
+  // Auto reindent wraps.
+  { "keys": ["alt+shift+i"], "command": "reindent" },
+
+
+  // Bookmarks
+  { "keys": ["alt+pagedown"], "command": "next_bookmark" },
+  { "keys": ["alt+pageup"], "command": "prev_bookmark" },
+  { "keys": ["alt+insert"], "command": "toggle_bookmark" },
+  { "keys": ["alt+delete"], "command": "clear_bookmarks" },
+  { "keys": ["alt+f2"], "command": "select_all_bookmarks" },
+
+
+  // Find and expand cursor
+  { "keys": ["ctrl+d"], "command": "find_under_expand" },
+  { "keys": ["ctrl+alt+d"], "command": "find_under_expand_skip" },
+
+
+  // Overlay commands
+  // -----------------------------------
+  { "keys": ["ctrl+p"], "command": "show_overlay", "args": { "overlay": "goto", "show_files": true } },
+  { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": { "overlay": "command_palette" } },
+  { "keys": ["ctrl+r"], "command": "show_overlay", "args": { "overlay": "goto", "text": "@" } },
+  { "keys": ["ctrl+g"], "command": "show_overlay", "args": { "overlay": "goto", "text": ":" } },
+  { "keys": ["ctrl+;"], "command": "show_overlay", "args": { "overlay": "goto", "text": "#" } },
+
+
+  // =============================================
+  // Plugin Commands.
+  // =============================================
+
+
+  // ---------------------------------------------
+  // AutoFileName plugin hotkeys.
+  // ---------------------------------------------
+  {
+    "keys": ["alt+shift+f"],
+    "command": "afn_show_filenames",
+    "context": [{
+      "key": "afn_use_keybinding",
+      "operator": "equal",
+      "operand": true
+    }]
+  },
+
+
+
+  // ---------------------------------------------
+  // Bracket Highlighter
+  // ---------------------------------------------
+
+  // Go to left bracket
+  {
+    // "keys": ["ctrl+alt+shift+up"],
+    "keys": ["alt+["],
+    "command": "bh_key",
+    "args": {
+      "no_outside_adj": null,
+      "no_block_mode": null,
+      "lines": true,
+      "plugin": {
+        "type": ["__all__"],
+        "command": "bh_modules.bracketselect",
+        "args": { "select": "left" }
+      }
+    }
+  },
+  // Go to right bracket
+  {
+    // "keys": ["ctrl+alt+shift+down"],
+    "keys": ["alt+]"],
+    "command": "bh_key",
+    "args": {
+      "no_outside_adj": null,
+      "no_block_mode": null,
+      "lines": true,
+      "plugin": {
+        "type": ["__all__"],
+        "command": "bh_modules.bracketselect",
+        "args": { "select": "right" }
+      }
+    }
+  },
+
+  // Select content between brackets
+  {
+    "no_outside_adj": null,
+    "keys": ["alt+shift+s"],
+    "command": "bh_key",
+    "args": {
+      "lines": true,
+      "plugin": {
+        "type": ["__all__"],
+        "command": "bh_modules.bracketselect"
+      }
+    }
+  },
+
+  // Select content including brackets
+  {
+    "keys": ["alt+shift+d"],
+    "command": "bh_key",
+    "args": {
+      "no_outside_adj": null,
+      "lines": true,
+      "plugin": {
+        "type": ["__all__"],
+        "command": "bh_modules.bracketselect",
+        "args": { "always_include_brackets": true }
+      }
+    }
+  },
+
+  // Select tag name of HTML/XML tag (both opening name and closing)
+  {
+    "keys": ["ctrl+alt+t"],
+    "command": "bh_key",
+    "args": {
+      "plugin": {
+        "type": ["cfml", "html", "angle"],
+        "command": "bh_modules.tagnameselect"
+      }
+    }
+  },
+
+  // Fold contents between brackets
+  {
+    "keys": ["alt+shift+["],
+    "command": "bh_key",
+    "args": {
+      "plugin": {
+        "type": ["__all__"],
+        "command": "bh_modules.foldbracket"
+      }
+    }
+  },
+
+  // Convert single quote string to double quoted string and vice versa
+  // Will handle escaping or unescaping quotes within the string
+  {
+    "keys": ["alt+shift+q"],
+    "command": "bh_key",
+    "args": {
+      "lines": true,
+      "plugin": {
+        "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
+        "command": "bh_modules.swapquotes"
+      }
+    }
+  },
+
+  // Swap brackets with another type
+  {
+    "keys": ["alt+shift+e"],
+    "command": "swap_brackets"
+  },
+
+  // ---------------------------------------------
+  // Column Select
+  // ---------------------------------------------
+
+  // Column Select (Vertical)
+  { "keys": ["ctrl+alt+up"], "command": "column_select", "args": { "by": "lines", "forward": false } },
+  { "keys": ["ctrl+alt+down"], "command": "column_select", "args": { "by": "lines", "forward": true } },
+
+
+
+  // ---------------------------------------------
+  // Center Comment
+  // ---------------------------------------------
+  {
+    "keys": ["super+alt+c"],
+    "command": "center_comment"
+  },
+
+
+  // ---------------------------------------------
+  // Comment Fold ALL
+  // Fold CODE by Comments
+  // ---------------------------------------------
+  {
+    "keys": ["alt+/"],
+    "command": "comment_fold"
+  },
+  {
+    "keys": ["shift+alt+/"],
+    "command": "comment_unfold"
+  },
+
+  // ---------------------------------------------
+  // Fold Comments ALL
+  // ---------------------------------------------
+  {
+    "keys": ["ctrl+shift+c"],
+    "command": "toggle_fold_comments"
+  },
+
+
+
+  // ---------------------------------------------
+  // DocBlockr.
+  // ---------------------------------------------
+
+  // reparse a comment block's placeholders
+  {
+    "keys": ["alt+r"],
+    "command": "jsdocs_reparse",
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "comment.block" }
+    ]
+  },
+
+
+
+  // ---------------------------------------------
+  // EMMET
+  // ---------------------------------------------
+  // Expand abbreviation
+  {
+    "keys": ["alt+e"],
+    "args": {
+      "action": "expand_abbreviation"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.expand_abbreviation"
+    }]
+  },
+
+  // select begin and end tags to rename.
+  {
+    "keys": ["alt+shift+t"],
+    "command": "rename_tag",
+    "context": [{
+      "key": "emmet_action_enabled.rename_tag"
+    }]
+  },
+
+  // Wrap by tag
+  {
+    "keys": ["alt+shift+g"],
+    "command": "wrap_as_you_type",
+    "context": [{
+        "operand": false,
+        "operator": "equal",
+        "match_all": true,
+        "key": "setting.is_widget"
+      },
+      {
+        "match_all": true,
+        "key": "emmet_action_enabled.wrap_as_you_type"
+      }
+    ]
+  },
+
+  // Incremet/Decrement number
+  {
+    "keys": ["alt+up"],
+    "args": {
+      "action": "increment_number_by_1"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.increment_number_by_1"
+    }]
+  },
+  {
+    "keys": ["alt+down"],
+    "args": {
+      "action": "decrement_number_by_1"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.decrement_number_by_1"
+    }]
+  },
+
+  {
+    "keys": ["alt+shift+up"],
+    "args": {
+      "action": "increment_number_by_10"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.increment_number_by_10"
+    }]
+  },
+  {
+    "keys": ["alt+shift+down"],
+    "args": {
+      "action": "decrement_number_by_10"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.decrement_number_by_10"
+    }]
+  },
+
+  // HTML Step SELECT between tags with/without its expanded to
+  // OUTWARD or INWARD. Increase / Decrease.
+  // ---------------------------------------------
+  {
+    "keys": ["ctrl+."],
+    "args": {
+      "action": "balance_outward"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.balance_outward"
+    }]
+  },
+  {
+    "keys": ["ctrl+,"],
+    "args": {
+      "action": "balance_inward"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.balance_inward"
+    }]
+  },
+
+
+  // NO changed
+  // ---------------------------------------------
+  {
+    "keys": ["ctrl+shift+u"],
+    "command": "update_as_you_type",
+    "context": [{
+        "operand": false,
+        "operator": "equal",
+        "match_all": true,
+        "key": "setting.is_widget"
+      },
+      {
+        "match_all": true,
+        "key": "emmet_action_enabled.update_as_you_type"
+      }
+    ]
+  },
+  {
+    "keys": ["ctrl+alt+enter"],
+    "command": "expand_as_you_type",
+    "context": [{
+        "operand": false,
+        "operator": "equal",
+        "match_all": true,
+        "key": "setting.is_widget"
+      },
+      {
+        "match_all": true,
+        "key": "emmet_action_enabled.expand_as_you_type"
+      }
+    ]
+  },
+
+  // Remove TAG
+  {
+    "keys": ["shift+ctrl+;"],
+    "args": {
+      "action": "remove_tag"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.remove_tag"
+    }]
+  },
+
+  // Select item next, prev
+  // ---------------------------------------------
+  {
+    "keys": ["shift+ctrl+."],
+    "args": {
+      "action": "select_next_item"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.select_next_item"
+    }]
+  },
+  {
+    "keys": ["shift+ctrl+,"],
+    "args": {
+      "action": "select_previous_item"
+    },
+    "command": "run_emmet_action",
+    "context": [{
+      "key": "emmet_action_enabled.select_previous_item"
+    }]
+  },
+
+
+  // ---------------------------------------------
+  // ESLint Formatter OR ESLint Fix
+  // ---------------------------------------------
+  {
+    "keys": ["ctrl+alt+e"],
+    // "command": "format_eslint"
+    "command": "eslint_fix"
+  },
+
+
+
+  // ---------------------------------------------
+  // jsPrettier
+  // ---------------------------------------------
+  // { "keys": ["ctrl+alt+f"], "command": "js_prettier" },
+
+
+
+  // ---------------------------------------------
+  // GotoDocumentation
+  // ---------------------------------------------
+  { "keys": ["ctrl+alt+shift+/"], "command": "goto_documentation" },
+  { "keys": ["super+shift+d"], "command": "goto_documentation" },
+
+
+
+  // ---------------------------------------------
+  // HTML/CSS/JS/JSON Prettify
+  // ---------------------------------------------
+  {
+    "keys": ["alt+shift+h"],
+    "command": "htmlprettify"
+  },
+  {
+    "keys": ["ctrl+shift+h", "p"],
+    "command": "htmlprettify_set_prettify_prefs"
+  },
+  {
+    "keys": ["ctrl+shift+h", "o"],
+    "command": "htmlprettify_set_plugin_options"
+  },
+  {
+    "keys": ["ctrl+shift+h", "k"],
+    "command": "htmlprettify_set_keyboard_shortcuts"
+  },
+  {
+    "keys": ["ctrl+shift+h", "n"],
+    "command": "htmlprettify_set_node_path"
+  },
+
+
+  // ---------------------------------------------
+  // JavaScript Completions
+  // ---------------------------------------------
+  // {
+  //   "keys": ["super+alt+i"],
+  //   "command": "find_description"
+  // },
+  // {
+  //   "keys": ["super+shift+h"],
+  //   "command": "show_code_highlights_eval"
+  // },
+  // {
+  //   "keys": ["super+alt+c"],
+  //   "command": "can_i_use"
+  // },
+
+
+
+  // ---------------------------------------------
+  // JavaScript Enhancements
+  // ---------------------------------------------
+  {
+    "keys": ["super+alt+c"],
+    "command": "javascript_enhancements_can_i_use"
+  },
+  // {
+  //   "keys": ["super+shift+g"],
+  //   "command": "javascript_enhancements_go_to_definition"
+  // },
+  // {
+  //   "keys": ["super+shift+h"],
+  //   "command": "javascript_enhancements_show_hint_parameters"
+  // },
+
+
+  // ---------------------------------------------
+  //                    PHPCS
+  // https://benmatselby.dev/sublime-phpcs/
+  // ---------------------------------------------
+
+  // The following is a list of commands that you can
+  // bind to a keyboard shortcut:
+  // ---------------------------------------------
+  // phpcs_fix_this_file
+  // phpcs_clear_sniffer_marks
+  // phpcs_goto_next_error
+  // phpcs_show_previous_errors
+  // phpcs_sniff_this_file
+
+  {
+    "keys": ["ctrl+k", "ctrl+f"],
+    "command": "phpcs_fix_this_file",
+    "args": { "tool": "CodeBeautifier" }
+  },
+
+  {
+    "keys": ["ctrl+k", "f"],
+    "command": "phpcs_fix_this_file",
+    "args": { "tool": "CodeBeautifier" }
+  },
+
+
+
+  // ---------------------------------------------
+  // Sync View Scroll
+  // ---------------------------------------------
+  {
+    "keys": ["alt+shift+y"],
+    "command": "toggle_sync_scroll"
+  },
+
+
+
+
+  // ---------------------------------------------
+  // Token Styles
+  // ---------------------------------------------
+  {
+    "keys": ["alt+s", "1"],
+    "command": "token_style",
+    "args": { "style_index": 0 }
+  },
+  {
+    "keys": ["alt+s", "2"],
+    "command": "token_style",
+    "args": { "style_index": 1 }
+  },
+  {
+    "keys": ["alt+s", "3"],
+    "command": "token_style",
+    "args": { "style_index": 2 }
+  },
+  {
+    "keys": ["alt+s", "4"],
+    "command": "token_style",
+    "args": { "style_index": 3 }
+  },
+  {
+    "keys": ["alt+s", "5"],
+    "command": "token_style",
+    "args": { "style_index": 4 }
+  },
+
+  {
+    "keys": ["alt+s", "7"],
+    "command": "token_style_go",
+    "args": { "style_index": 1 }
+  },
+  {
+    "keys": ["alt+s", "8"],
+    "command": "token_style_clear",
+    "args": { "style_index": 1 }
+  },
+  { "keys": ["alt+s", "alt+s"], "command": "token_style_clear" },
+  { "keys": ["alt+shift+pagedown"], "command": "token_style_go" },
+  { "keys": ["alt+shift+pageup"], "command": "token_style_go_back" },
+
+
+  // ---------------------------------------------
+  // Text Marker
+  // ---------------------------------------------
+  { "keys": ["alt+c"], "command": "text_marker", },
+  { "keys": ["alt+shift+c"], "command": "text_marker_clear" },
+
+
+  // =============================================
+  // DRUPAL
+  // =============================================
+
+  // Goto Drupal API
+  // ---------------------------------------------
+
+  { "keys": ["ctrl+alt+shift+a"], "command": "goto_drupalapi" },
+
+
+
+  // Developers
+  { "keys": ["ctrl+alt+shift+s"], "command": "show_scope_name" },
+
+]

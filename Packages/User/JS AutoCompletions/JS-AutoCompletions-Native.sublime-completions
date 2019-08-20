@@ -1,0 +1,209 @@
+{
+  "scope": "source.js - (meta.property.object.js, meta.function.declaration.js, variable.function.js, support.constant, string.quoted)",
+  // "scope": "source.js",
+  "completions": [
+    // {
+    //   "trigger": "ajax_request",
+    //   "contents": "var ajax = new XMLHttpRequest();\najax.onreadystatechange = function() {\n\tif (ajax.readyState == 4 && ajax.status == 200) {\n\t\t${1:var response = ajax.responseText;}\n\t}\n};\najax.open(${2:method}, ${3:URL}, ${4:true});\najax.setRequestHeader(\"Content-type\", ${5:\"application/json\"});\najax.send(${6:data});"
+    // },
+    {
+      "trigger": "ajax-request-json",
+      "contents": "const ajax = new XMLHttpRequest();\najax.onload = function () {\n\tif (ajax.status != 200) {\n\t\treturn;\n\t}\n\t${1:let response = JSON.parse(ajax.responseText);}\n\t${2:// body...}\n};\najax.open(${3:'GET'}, ${4:URL}, ${5:true});\najax.send();"
+    },
+
+    ////////////////
+    // Prototypes //
+    ////////////////
+    {
+      "trigger": "prototype-array-call\t   Array.prototype.method.call(list, fn)",
+      "contents": "Array.prototype.${1:method_name}.call(${2:list}, ${3:function});"
+    },
+    {
+      "trigger": "prototype\t   class.prototype.method = function (…) {…}",
+      "contents": "${1:class_name}.prototype.${2:method_name} = function (${3:argument}) {\n\t${4:// body...}\n};"
+    },
+
+
+    //////////////////////////
+    // conditional operator //
+    //////////////////////////
+    {
+      "trigger": "if \t if (…) {…}",
+      "contents": "if (${1:condition}) {\n\t${2:// statement}\n}"
+    },
+    {
+      "trigger": "if-else\t if (…) {…} else {…}",
+      "contents": "if (${1:condition}) {\n\t${2:// statement}\n} else {\n\t${3:// statement}\n}"
+    },
+    {
+      "trigger": "else\t else {…}",
+      "contents": "else {\n\t$1\n}"
+    },
+    {
+      "trigger": "else-if\t else if (…) {…}",
+      "contents": "else if (${1:condition}) {\n\t$2\n}"
+    },
+    {
+      // @TODO: what dont work?
+      "trigger": "conditional-operator-ternary\t(…) ? … : …",
+      "contents": "(${1:condition}) ? ${2:val1} : ${3:val2};"
+    },
+
+    {
+      "trigger": "switch\tswitch (…) {case: … default: …}",
+      "contents": "switch (${1:expression}) {\n\tcase ${2:label_1}:\n\t\t${3:// statements_1}\n\t\tbreak;\n\tdefault:\n\t\t${4:// statements_def}\n\t\tbreak;\n}"
+    },
+
+    ///////////////
+    // Try Catch //
+    ///////////////
+    {
+      "trigger": "try-catch\t try {…} catch {…}",
+      "contents": "try {\n\t${1:// statements}\n} catch(e) {\n\t${2:// statements}\n\tconsole.log(e);\n}"
+    },
+    {
+      "trigger": "try-catch-finally\t try {…} catch {…} finally {…}",
+      "contents": "try {\n\t${1:// statements}\n} catch(e) {\n\t${2:// statements}\n\tconsole.log(e);\n} finally {\n\t${3:// statements}\n}"
+    },
+    {
+      "trigger": "throw",
+      "contents": "throw $1;"
+    },
+
+
+    ///////////
+    // LOOPS //
+    ///////////
+    {
+      "trigger": "for\t     for i (…) {…} : Loop", //\t     for i (…) {…} : Array length iterator",
+      "contents": "for (var i = 0, length1 = ${1:array}.length; i < length1; i++) {\n\t${1:array}[i]${2:}\n}",
+    },
+    {
+      "trigger": "for-j\t   for j (…) {…} : Loop",
+      "contents": "for (var j = 0, length2 = ${1:array}.length; j < length2; j++) {\n\t${1:array}[j]${2:}\n}"
+    },
+    {
+      "trigger": "for-k\t   for k (…) {…} : Loop",
+      "contents": "for (var k = 0, length3 = ${1:array}.length; k < length3; k++) {\n\t${1:array}[k]${2:}\n}"
+    },
+    {
+      "trigger": "forEach\t….forEach(fn (…) {…}) : Loop",
+      "contents": "${1:array}.forEach(function (${2:element}, ${3:index}) {\n\t${4:// statements}\n});"
+    },
+    {
+      "trigger": "for-of\tfor (… of …) {…} : Loop",
+      "contents": "for (${1:variable} of ${2:object}) {\n\t${3:// statement}\n}"
+    },
+    {
+      "trigger": "for-in\tfor (… in …) {…} : Loop",
+      "contents": "for (${1:variable} in ${2:object}) {\n\t${3:// statement}\n}"
+    },
+    {
+      "trigger": "do-while\tdo {…} while (…)",
+      "contents": "do {\n\t${2:// statement}\n} while (${1:condition});"
+    },
+    {
+      "trigger": "while\twhile (…) {…}",
+      "contents": "while (${1:condition}) {\n\t${2:// statement}\n}"
+    },
+
+    ///////////////
+    // Functions //
+    ///////////////
+    {
+      "trigger": "function\t  function name(…) {…} : Function",
+      "contents": "function ${1:function_name}(${2:argument}) {\n\t${3:// body...}\n}"
+    },
+    {
+      "trigger": "function-anonymous\t  function (…) {…} : Anonymous Function",
+      "contents": "function (${1:argument}) {\n\t${2:// body...}\n}"
+    },
+    {
+      "trigger": "function-arrow\t  (…) => {…} : Arrow Function",
+      "contents": "(${1:argument}) => {\n\t${2:// body...}\n}"
+    },
+    {
+      "trigger": "function-async\t  async function name(…) {…} : Async Function",
+      "contents": "async function ${1:function_name}(${2:argument}) {\n\t${3:// body...}\n}"
+    },
+    {
+      "trigger": "function-generator\t  function* name(…) {…} : Generator Function",
+      "contents": "function* ${1:function_name}(${2:argument}) {\n\t${3:// body...}\n}"
+    },
+    {
+      "trigger": "function-iife\t(function (…) {…})() : IIFE Function",
+      "contents": "(function (${1:argument}) {\n\t${2:// body...}\n})(${3:argument});"
+    },
+
+
+    /////////////
+    // Console //
+    /////////////
+    {
+      "trigger": "console-error",
+      "contents": "console.error(${1:''});"
+    },
+    {
+      "trigger": "console-info",
+      "contents": "console.info(${1:''});"
+    },
+    {
+      "trigger": "console-log",
+      "contents": "console.log(${1:''});"
+    },
+    {
+      "trigger": "console-warn",
+      "contents": "console.warn(${1:''});"
+    },
+    {
+      "trigger": "console-time",
+      "contents": "console.time('$1');"
+    },
+    {
+      "trigger": "console-timeEnd",
+      "contents": "console.timeEnd('$1');"
+    },
+    {
+      "trigger": "console-trace",
+      "contents": "console.trace();"
+    },
+
+
+    /////////////////////////////////
+    // Single operator completions //
+    /////////////////////////////////
+    "async",
+    "await",
+    "break",
+    "continue",
+    "const ${1:var}",
+    "default",
+    "export",
+    "function",
+    "let ${1:var}",
+    "var ${1:var}",
+    "return",
+    "void",
+    "void(${1:''})",
+    {
+      "trigger": "Infinity\tnumber",
+      "contents": "Infinity"
+    },
+    {
+      "trigger": "NaN\tnumber",
+      "contents": "NaN"
+    },
+    {
+      "trigger": "undefined\tvoid",
+      "contents": "undefined"
+    },
+
+
+    {
+      "trigger": "use-strict",
+      "contents": "'use strict';"
+    }
+
+  ]
+
+}

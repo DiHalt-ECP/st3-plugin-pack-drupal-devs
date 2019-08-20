@@ -1,0 +1,6 @@
+{
+  "file_length_threshold" : 70000,
+  "check_on_save" : true,
+  // debounce time in milli seconds
+  "debounce_time": 500
+}

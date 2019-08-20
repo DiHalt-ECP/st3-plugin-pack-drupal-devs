@@ -1,0 +1,9 @@
+{
+  // obj containing the docs for each scope
+  "docs": {
+    // these are merged with the default ones
+
+
+    "js": "https://developer.mozilla.org/ru/search?q=%(query)s&topic=js",
+  }
+}

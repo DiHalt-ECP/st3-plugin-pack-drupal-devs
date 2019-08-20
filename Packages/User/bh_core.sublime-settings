@@ -1,0 +1,63 @@
+
+{
+  // Character threshold to search
+  "search_threshold": 70000,
+  // Ignore threshold
+  "ignore_threshold": false,
+  // Match brackets only when the cursor is touching the inside of the bracket
+  "match_only_adjacent": false,
+
+  "show_in_minimap": false,
+
+  // Outside adjacent bracket matching
+  "bracket_outside_adjacent": true,
+
+
+  // "block_cursor_mode": true,
+
+
+  "user_bracket_styles": {
+    "default": {
+      "icon": "line",
+      "color": "region.yellowish brackethighlighter.default",
+      "style": "outline"
+    }
+  },
+
+
+  "user_scope_brackets": [
+    {
+      "name": "backtick_quote",
+      "open": "(`)",
+      "close": "(`)",
+      "style": "single_quote",
+      "scopes": [
+        "string.interpolated.ruby",
+        "string.interpolated.backtick.shell",
+        "string.template-string.js",
+        "string.template.js, meta.template.expression.js"
+      ],
+      "language_filter": "whitelist",
+      "language_list": [
+        "Ruby",
+        "Shell-Unix-Generic",
+        "Bash",
+        "JavaScript",
+        "JavaScript (ESLint)",
+        "JavaScript (Gruntfile)",
+        "JavaScript (Gulpfile)",
+        "JavaScript (Naomi)",
+        "JavaScript (PostCSS)",
+        "JavaScript (Puglint)",
+        "JavaScript (Stylelint)",
+        "JavaScript (Webpack)",
+        "JavaScript Modern",
+        "JavaScriptNext"
+      ],
+      "sub_bracket_search": "true",
+      "enabled": true
+    },
+  ]
+
+
+}

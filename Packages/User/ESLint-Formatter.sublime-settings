@@ -1,0 +1,34 @@
+// Settings in here override those in "ESLint-Formatter/ESLint-Formatter.sublime-settings",
+// Format only SAVED FILE!!!
+{
+
+  // Automatically format when a file is saved.
+  "format_on_save": true,
+  "format_on_save_extensions": [
+    "js",
+    "jsx",
+    "es",
+    "es6",
+    "babel"
+  ],
+
+
+  "node_path": {
+    "windows": "node",
+    "linux": "/usr/bin/nodejs",
+    "osx": "/usr/local/bin/node"
+  },
+
+  "eslint_path": {
+    "windows": "%APPDATA%/npm/node_modules/eslint_d/bin/eslint_d",
+    "linux": "/usr/bin/eslint_d",
+    "osx": "/usr/local/bin/eslint_d"
+  },
+
+  "local_eslint_path": {
+    "windows": "node_modules/eslint_d/bin/eslint_d.js",
+    "linux": "node_modules/.bin/eslint_d",
+    "osx": "node_modules/.bin/eslint_d"
+  },
+
+}

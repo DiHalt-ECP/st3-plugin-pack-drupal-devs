@@ -1,0 +1,15 @@
+{
+  "preferences": {
+    "css.autoInsertVendorPrefixes": false
+  },
+  // "disabled_keymap_actions": "all",
+  "disabled_keymap_actions": "prev_edit_point, next_edit_point, split_join_tag, update_image_size",
+  "disable_tab_abbreviations_for_scopes": "",
+  // A regexp for scope name: if it matches, Tab handler won’t work
+  // The reason to use this preference is that ST2 has buggy scope matcher
+  // which may still trigger Tab handler even if it's restricted by context
+  "disable_tab_abbreviations_for_regexp": "source\\.(?!css).+?\\stext\\.html",
+
+
+  "insert_final_tabstop": true,
+}

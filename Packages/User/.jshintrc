@@ -1,0 +1,128 @@
+{
+  // airbnb config of jshintrc.
+  // Modified by DiHalt.
+
+  // Allow ES6.
+  "esversion": 6,
+
+  // Custom Globals
+  // additional predefined global variables
+  "globals": {
+    "Drupal": true,
+    "drupalSettings": true,
+    "drupalTranslations": true,
+    "domready": true,
+    "jQuery": true,
+    "_": true,
+    "matchMedia": true,
+    "Backbone": true,
+    "Modernizr": true,
+    "CKEDITOR": true
+    // "var": true/false
+  },
+
+  /*
+   * ENVIRONMENTS
+   * =================
+   */
+
+  // Define globals exposed by modern browsers.
+  "browser": true,
+
+  // This option defines globals that are usually used for logging poor-man's
+  // debugging: console, alert, etc.
+  "devel": true,
+
+  // Define globals exposed by jQuery.
+  "jquery": true,
+
+  // This option informs JSHint that the input code describes an ECMAScript 6 module.
+  // All module code is interpreted as strict mode code.
+  "module": true,
+
+  // Define globals exposed by Node.js.
+  "node": true,
+
+
+  /*
+   * ENFORCING OPTIONS
+   * =================
+   */
+
+  // Force all variable names to use either camelCase style or UPPER_CASE
+  // with underscores.
+  // TODO: DEPRECATED
+  "camelcase": true,
+
+  // Require {} for every new block or scope.
+  "curly": true,
+
+  // Prohibit use of == and != in favor of === and !==.
+  "eqeqeq": true,
+
+  // Enforce tab width of 2 spaces.
+  // TODO: DEPRECATED
+  // TODO: Not Work!
+  "indent": 2,
+
+  // true: Require filtering for..in loops with obj.hasOwnProperty()
+  "forin": true,
+
+  // true: prohibits overwriting prototypes of native objects such as Array, Date etc.
+  "freeze": true,
+
+  // This option enables warnings about the use of identifiers which are defined in future versions of JavaScript.
+  "futurehostile": true,
+
+  // This option lets you control cyclomatic complexity throughout your code.
+  "maxcomplexity": 10,
+
+  // Prohibit use of a variable before it is defined.
+  "latedef": true,
+
+  // Enforce line length to 100 characters
+  // TODO: DEPRECATED
+  "maxlen": 100,
+
+  // Require capitalized names for constructor functions.
+  // TODO: DEPRECATED
+  "newcap": true,
+
+  // Enforce use of single quotation marks for strings.
+  // TODO: DEPRECATED
+  "quotmark": "single",
+
+  // This option enables warnings for regular expressions which do not include
+  // the "u" flag. The "u" flag extends support for Unicode and also enables
+  // more strict parsing rules.
+  // "regexpu": true,
+
+  // Enforce placing 'use strict' at the top function scope
+  "strict": true,
+
+  // This option warns when a comma is not placed after the last element
+  // in an array or object literal.
+  "trailingcomma": true,
+
+  // Prohibit use of explicitly undeclared variables.
+  "undef": true,
+
+  // Warn when variables are defined but never used.
+  "unused": true,
+
+  /*
+   * RELAXING OPTIONS
+   * =================
+   */
+
+  // Suppress warnings about == null comparisons.
+  "eqnull": true,
+
+  // This option suppresses most of the warnings about possibly unsafe line breakings in your code.
+  // TODO: DEPRECATED
+  "laxbreak": true,
+
+  // This option prohibits the use of unary increment and decrement operators.
+  // Some people think that ++ and -- reduces the quality of their coding styles.
+  "plusplus": true
+}

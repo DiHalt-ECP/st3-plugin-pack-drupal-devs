@@ -1,0 +1,20 @@
+{
+  // An array of syntax names to exclude from being autocompleted.
+  // Can be a partial string, for instance, "css" would match scss code.
+  // scope of block/region which contain cursor.
+  "exclude_from_completion": [
+    "comment",
+    "css",
+    "scss",
+    "yaml"
+  ],
+  // File scope.
+  "exclude_sources": [
+    "markdown",
+    "yaml"
+  ],
+  // don't show completions for words with fewer than this many chars
+  "min_word_size": 5,
+  // don't show completions for words with more than this many chars
+  "max_word_size": 40
+}

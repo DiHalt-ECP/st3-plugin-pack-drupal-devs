@@ -1,0 +1,221 @@
+// SublimeLinter Settings - User
+{
+  // When in the "background" lint mode, this value determines
+  // the minimum delay before a request is send to the linter
+  "delay": 1,
+
+  // Available gutter themes:
+  // - Blueberry Cross
+  // - Blueberry Round
+  // - Circle
+  // - Danish Royalty
+  // - Default
+  // - Hands
+  // - Knob
+  // - Knob Symbol
+  // - Koloria
+  // - ProjectIcons
+  // Note that you may need to change the "icon" property in "styles"
+  // to an icon in the theme (they usually include "warning" and "error")
+  "gutter_theme": "Knob Symbol",
+  // "gutter_theme": "Default",
+
+
+  // Send a "terminate" signal to old lint processes, if their result would
+  // be thrown away. If false we fire-and-forget processes instead.
+  "kill_old_processes": true,
+
+  // Show a report for problems on a line by hovering over the gutter.
+  "show_hover_line_report": true,
+
+  // Show a report for problems on a region by hovering over it.
+  "show_hover_region_report": true,
+
+  // Highlight problems in the minimap.
+  "show_marks_in_minimap": true,
+
+  "paths": {
+    "linux": [],
+    "osx": [],
+    "windows": [
+    ]
+  },
+
+  "linters": {
+    "annotations": {
+      "disable": false,
+
+      // "warnings": "[FOO], BAR",
+      // "errors": ["WHAT?", "OMG!"]
+      "styles": [{
+          "icon": "Packages/SublimeLinter/gutter-themes/Hands/warning.png",
+          "mark_style": "fill",
+          "priority": 0,
+          "scope": "sublimelinter.annotations.warning",
+          "types": ["warning"]
+        },
+        {
+          "icon": "Packages/SublimeLinter/gutter-themes/Hands/error.png",
+          "mark_style": "fill",
+          "priority": 0,
+          "scope": "sublimelinter.annotations.error",
+          "types": ["error"]
+        }
+      ]
+    },
+
+    "phpcs": {
+      "disable": false,
+      "args": [
+        "--standard=drupal,DrupalPractice"
+      ],
+      // "standard": "Drupal, DrupalPractice",
+      // Exclude files that match the given pattern(s).
+      "excludes": ["*.htm?", "*.js"],
+      // Determines for which views this linter will run.
+      "selector": "embedding.php, source.php"
+    },
+
+    "phpmd": {
+      "disable": false,
+      "args": [
+        "--standard=drupal,DrupalPractice"
+      ],
+      // Exclude files that match the given pattern(s).
+      "excludes": ["*.htm?"],
+      // Determines for which views this linter will run.
+      "selector": "embedding.php, source.php"
+    },
+
+    "twiglint": {
+      "disable": false,
+      // "args": [],
+      // "standard": "Drupal, DrupalPractice",
+      // Determines for which views this linter will run.
+      "selector": "text.html.twig",
+      "styles": [{
+          "icon": "Packages/SublimeLinter/gutter-themes/Danish Royalty/warning.png",
+          "mark_style": "outline",
+          "priority": 1,
+          "scope": "region.yellowish markup.warning.sublime_linter",
+          "types": ["warning"]
+        },
+        {
+          // Determines, for overlapping errors, which one is visualised.
+          "icon": "Packages/SublimeLinter/gutter-themes/Danish Royalty/error.png",
+          "mark_style": "outline",
+          "priority": 2,
+          "scope": "region.redish markup.error.sublime_linter",
+          "types": ["error"]
+        }
+      ]
+
+    },
+
+    "jshint": {
+      "disable": false,
+
+      // Suppress errors that match the the given pattern(s).
+      // Either a 'string' or an 'array'. Each input string is handled as
+      // a case-insensitive regex pattern and matched against the
+      // error_type, code, and message. If it matches, the error will be
+      // thrown away.
+      // E.g. ["warning: ", "W3\d\d: ", "missing <!DOCTYPE> declaration"]
+      "filter_errors": ["W140"],
+
+      "selector": "source.js, text.html.basic source.js",
+      "styles": [{
+          "icon": "Packages/SublimeLinter/gutter-themes/Default/triangle.png",
+          "mark_style": "solid_underline",
+          "priority": 1,
+          "scope": "jshint-warn",
+          "types": ["warning"]
+        },
+        {
+          // Determines, for overlapping errors, which one is visualised.
+          "icon": "Packages/SublimeLinter/gutter-themes/Default/pointer.png",
+          "mark_style": "solid_underline",
+          "priority": 2,
+          "scope": "region.pinkish",
+          "types": ["error"]
+        }
+      ]
+    },
+
+    "eslint_d": {
+      "disable": true
+    },
+
+
+    "eslint": {
+      "disable": false,
+      // "args": [],
+      "executable": "$APPDATA/npm/eslint_d.cmd",
+      "filter_errors": [],
+      "selector": "source.js, text.html.basic source.js",
+      "styles": [{
+          "icon": "Packages/SublimeLinter/gutter-themes/Danish Royalty/warning.png",
+          "mark_style": "outline",
+          "priority": 1,
+          "scope": "region.yellowish markup.warning.sublime_linter",
+          "types": ["warning"]
+        },
+        {
+          // Determines, for overlapping errors, which one is visualised.
+          "icon": "Packages/SublimeLinter/gutter-themes/Danish Royalty/error.png",
+          "mark_style": "fill",
+          "priority": 2,
+          "scope": "region.redish markup.error.sublime_linter",
+          "types": ["error"]
+        }
+      ]
+    },
+
+    "stylelint": {
+      "disable": false,
+      "filter_errors": [],
+      "selector": "source.css - meta.attribute-with-value, source.sass, source.scss, source.less, source.sss",
+      "styles": [{
+          "icon": "Packages/SublimeLinter/gutter-themes/Danish Royalty/warning.png",
+          "mark_style": "outline",
+          "priority": 1,
+          "scope": "region.yellowish markup.warning.sublime_linter",
+          "types": ["warning"]
+        },
+        {
+          // Determines, for overlapping errors, which one is visualised.
+          "icon": "Packages/SublimeLinter/gutter-themes/Danish Royalty/error.png",
+          "mark_style": "fill",
+          "priority": 2,
+          "scope": "region.redish markup.error.sublime_linter",
+          "types": ["error"]
+        }
+      ]
+    }
+
+  },
+
+
+  "styles": [{
+      "icon": "Packages/SublimeLinter/gutter-themes/Knob Symbol/warning.png",
+      "mark_style": "outline",
+      "priority": 1,
+      "scope": "region.yellowish markup.warning.sublime_linter",
+      "types": ["warning"]
+    },
+    {
+      // Determines, for overlapping errors, which one is visualised.
+      "icon": "Packages/SublimeLinter/gutter-themes/Knob Symbol/error.png",
+      "mark_style": "fill",
+      "priority": 2,
+      "scope": "region.redish markup.error.sublime_linter",
+      "types": ["error"]
+    },
+    {
+      "priority": 1,
+      "icon": "dot",
+      "mark_style": "outline"
+    }
+  ]
+
+}

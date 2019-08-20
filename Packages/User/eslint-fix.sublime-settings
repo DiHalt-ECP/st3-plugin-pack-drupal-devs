@@ -1,0 +1,28 @@
+// Settings in here override those in "ESLint Fix/eslint-fix.sublime-settings",
+
+{
+    "paths":
+    {
+        "windows": [
+            "%APPDATA%/npm/node_modules/eslint_d/bin/eslint_d",
+            "node_modules/eslint/bin/eslint.js"
+        ],
+        "linux": [],
+        "osx": [],
+    },
+
+    "local_eslint_path":
+    {
+        "windows": "node_modules/eslint/bin/eslint_d.js",
+        "linux": "node_modules/.bin/eslint",
+        "osx": "node_modules/.bin/eslint"
+    },
+
+    // "config_path":
+    // {
+    //     "windows": "%APPDATA%/Sublime Text 3/Packages/User/.eslintrc.json",
+    //     "linux": "",
+    //     "osx": ""
+    // }
+
+}

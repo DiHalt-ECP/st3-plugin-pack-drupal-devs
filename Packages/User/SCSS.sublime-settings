@@ -1,0 +1,10 @@
+// These settings override both User and Default settings for the SCSS syntax
+{
+	"auto_complete": true,
+	"auto_complete_triggers": [
+		{
+			"selector": "meta.property-value.scss, punctuation.terminator.rule.css",
+			"characters": "#1234567890abcdef"
+		}
+	],
+}

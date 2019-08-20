@@ -1,0 +1,12 @@
+/___back/
+/lib/
+/local/
+/Packages/User/Package Control.cache
+/Packages/User/AutoFoldCode.sublime-settings
+/Packages/User/oscrypto-ca-bundle.crt
+/Packages/User/Package Control.last-run
+/Packages/User/Package Control.merged-ca-bundle
+/Packages/User/Package Control.user-ca-bundle
+
+package-lock.json
+yarn.lock
